@@ -26,6 +26,7 @@ public class EstudianteLogica {
         estudiante.setEdad(estudianteDTO.getEdad());
         estudiante.setCarrera(estudianteDTO.getCarrera());
         estudiante.setSemestre(1);
+        //Comentando prueba de CI
         estudianteRepository.save(estudiante);
     }
 }
