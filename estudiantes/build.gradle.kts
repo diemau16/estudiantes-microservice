@@ -26,6 +26,7 @@ dependencies {
 
 	testCompileOnly("org.projectlombok:lombok:1.18.30")
 	testAnnotationProcessor("org.projectlombok:lombok:1.18.30")
+	implementation("org.springframework.boot:spring-boot-starter-actuator:3.2.1")
 }
 
 tasks.withType<Test> {
