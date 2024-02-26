@@ -28,6 +28,7 @@ public class EstudianteLogica {
         estudiante.setSemestre(1);
         //sefsdfdsfsf
         //sdfdsfse
+        //sadkasdasda
         estudianteRepository.save(estudiante);
     }
 }

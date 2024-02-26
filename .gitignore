@@ -4,7 +4,6 @@ build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
-
 ### STS ###
 .apt_generated
 .classpath
@@ -16,7 +15,6 @@ build/
 bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
-
 ### IntelliJ IDEA ###
 .idea
 *.iws
@@ -25,23 +23,18 @@ bin/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-
 ### VS Code ###
 .vscode/
-
 # Compiled class file
 *.class
-
 # Log file
 *.log
-
 # Package Files #
 *.jar
 *.war
@@ -50,27 +43,21 @@ out/
 *.zip
 *.tar.gz
 *.rar
-
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-
 # Gradle files
 .gradle/
 build/
 !gradle/wrapper/gradle-wrapper.jar
-
 # Cache of project
 .cache
 .project
-
 # IDE files
 /.idea
 *.iml
 *.iws
-
 # The .vscode folder should not be tracked
 .vscode/
-
 # Temporary files
 *.tmp
 *.bak

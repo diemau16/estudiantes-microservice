@@ -12,10 +12,6 @@
         <module name="com.universidad.estudiantes.test" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="estudiantes" target="17" />
-      <module name="estudiantes.main" target="17" />
-      <module name="estudiantes.test" target="17" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="17" />
   </component>
 </project>
