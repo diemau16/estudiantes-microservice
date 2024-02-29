@@ -47,7 +47,6 @@ jobs:
 
       - name: Update Helm chart
         run: |
-          mkdir helm/chart
           wget -O helm/chart/estudiantes-0.1.0.tgz https://Edj2003.github.io/helm-estudiantes/estudiantes-0.1.0.tgz
           tar -zxvf helm/chart/estudiantes-0.1.0.tgz -C helm/chart
           echo "image.tag=latest" >> helm/chart/estudiantes/values.yaml
