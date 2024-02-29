@@ -61,11 +61,11 @@ jobs:
 
       - name: Store new version
         run: |
-              git config user.email "actions@github.com"
-              git config user.name "GitHub Actions"
-              echo "${{ github.run_number }}" > .version
-              git add .version
-              git commit -m "Update version"
+          echo "${{ github.run_number }}" > .version
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add .version
+          git commit -m "Update version"
 
       - name: Update Helm chart
         run: |
