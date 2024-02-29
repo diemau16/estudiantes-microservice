@@ -60,10 +60,12 @@ jobs:
           cd helm-repo
           helm package estudiantes --version $(date +%Y%m%d%H%M%S)
           helm repo index .
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
 
       - name: Push changes
-        uses: ad-m/github-push-action
+        uses: actions-js/push@master
         with:
+            directory: helm-estudiantes
             github_token: ${{ secrets.HELM_TOKEN }}
             repository: Edj2003/helm-estudiantes
-            branch: gh-pages
