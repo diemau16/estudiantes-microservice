@@ -35,24 +35,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ed2723/estudiantes:latest
-          
-      - name: Checkout Helm repo
-        uses: actions/checkout@v3
-        with:
-            repository: Edj2003/helm-estudiantes
-            ref: gh-pages
-            token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-            path: helm
-
-      - name: Update Helm chart
-        run: |
-          wget -O helm/chart/estudiantes-0.1.0.tgz https://Edj2003.github.io/helm-estudiantes/estudiantes-0.1.0.tgz
-          tar -zxvf helm/chart/estudiantes-0.1.0.tgz -C helm/chart
-          echo "image.tag=latest" >> helm/chart/estudiantes/values.yaml
-          helm package helm/chart/estudiantes -d helm/chart
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          git -C helm add .
-          git -C helm commit -m "Update Helm chart"
-          git -C helm push
+          tags: ed2723/estudiantes:${{ github.run_number }}
