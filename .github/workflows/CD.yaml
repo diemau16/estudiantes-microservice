@@ -57,10 +57,12 @@ jobs:
       - name: Update image tag in values.yaml
         run: |
           cd helm-repo/estudiantes
-          sed -i 's/tag: 22/tag: '${{ github.run_number }}'/g' values.yaml
+          sed -i 's/tag: '${{ steps.prev_version.outputs.version }}'/tag: '${{ github.run_number }}'/g' values.yaml
 
       - name: Store new version
         run: |
+              git config user.email "actions@github.com"
+              git config user.name "GitHub Actions"
               echo "${{ github.run_number }}" > .version
               git add .version
               git commit -m "Update version"
