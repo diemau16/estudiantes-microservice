@@ -51,6 +51,6 @@ public class EstudianteController {
 
     @GetMapping(path ="/test5")
     public String test5() {
-        return "El microservicio ahora sí sirve";
+        return "El microservicio";
     }
 }
