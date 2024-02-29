@@ -69,8 +69,10 @@ jobs:
           git config user.name "GitHub Actions"
 
       - name: Push changes
-        uses: actions-js/push@master
-        with:
-            directory: helm-repo
-            github_token: ${{ secrets.HELM_TOKEN }}
-            repository: Edj2003/helm-estudiantes
+        run: |
+            cd helm-repo
+            git add .
+            git commit -m "Update image tag in values.yaml" || echo "No changes to commit"
+            git push
+          env:
+            GH_TOKEN: ${{ secrets.HELM_TOKEN }}
