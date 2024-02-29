@@ -66,6 +66,6 @@ jobs:
       - name: Push changes
         uses: actions-js/push@master
         with:
-            directory: helm-estudiantes
+            directory: helm-repo
             github_token: ${{ secrets.HELM_TOKEN }}
             repository: Edj2003/helm-estudiantes
