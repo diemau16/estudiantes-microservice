@@ -36,3 +36,15 @@ jobs:
           context: .
           push: true
           tags: ed2723/estudiantes:latest
+          
+      - name: Update Helm chart
+        run: |
+          wget https://ed2723.github.io/helm-estudiantes/estudiantes-0.1.0.tgz
+          tar -zxvf estudiantes-0.1.0.tgz
+          echo "image.tag=latest" >> ./estudiantes/values.yaml
+          helm package mychart
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add estudiantes-0.1.0.tgz
+          git commit -m "Update Helm chart"
+          git push
