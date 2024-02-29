@@ -48,4 +48,9 @@ public class EstudianteController {
     public String test4() {
         return "El microservicio ya sirve por fin bendito DIos";
     }
+
+    @GetMapping(path ="/test5")
+    public String test5() {
+        return "El microservicio ahora sí sirve";
+    }
 }
