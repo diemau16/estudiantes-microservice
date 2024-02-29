@@ -65,4 +65,5 @@ jobs:
             directory: helm-repo
             github_token: ${{ secrets.HELM_TOKEN }}
             repository: Edj2003/helm-estudiantes
+            branch: gh-pages
             message: Version updated
