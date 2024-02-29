@@ -40,7 +40,7 @@ jobs:
       - name: Checkout Helm repo
         uses: actions/checkout@v3
         with:
-            repository: helm-estudiantes
+            repository: Edj2003/helm-estudiantes
             ref: gh-pages
             token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
             path: helm
