@@ -45,10 +45,6 @@ jobs:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           path: helm-repo
 
-      - name: Pull latest changes
-        run: |
-          cd helm-repo
-          git pull
 
       - name: Unpack Helm chart
         run: |
