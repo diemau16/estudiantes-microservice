@@ -59,11 +59,10 @@ jobs:
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
 
-      - name: Push changes
-        run: |
-            cd helm-repo
-            git add .
-            git commit -m "Update image tag in values.yaml" || echo "No changes to commit"
-            git push origin gh-pages:main
-        env:
-            GH_TOKEN: ${{ secrets.HELM_TOKEN }}
+      - name: Commit and Push Changes
+        uses: actions-js/push@master
+        with:
+            directory: helm-repo
+            github_token: ${{ secrets.HELM_TOKEN }}
+            repository: Edj2003/helm-estudiantes
+            message: Version updated
