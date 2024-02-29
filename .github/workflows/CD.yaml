@@ -52,18 +52,18 @@ jobs:
 
       - name: Update image tag in values.yaml
         run: |
-          cd helm-repo
+          cd helm-repo/estudiantes
           sed -i 's/tag: latest/tag: '${{ github.run_number }}'/g' values.yaml
 
       - name: Update Helm chart
         run: |
           cd helm-repo
-          helm package <chart-directory> --version $(date +%Y%m%d%H%M%S)
+          helm package estudiantes --version $(date +%Y%m%d%H%M%S)
           helm repo index .
 
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          repository: Edj2003/hel-estudiantes
+          repository: Edj2003/helm-estudiantes
           branch: gh-pages
