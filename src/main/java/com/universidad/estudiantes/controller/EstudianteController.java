@@ -29,4 +29,9 @@ public class EstudianteController {
     public List<Estudiante> obtenerEstudiantes() {
         return estudianteLogica.obtenerEstudiantes();
     }
+
+    @GetMapping(path ="/test")
+    public String test() {
+        return "El microservicio se ha actualizado";
+    }
 }
