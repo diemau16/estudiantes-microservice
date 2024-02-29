@@ -53,4 +53,9 @@ public class EstudianteController {
     public String test5() {
         return "El microservicio";
     }
+
+    @GetMapping(path ="/test6")
+    public String test6() {
+        return "El microservicio 6";
+    }
 }
