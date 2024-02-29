@@ -46,11 +46,6 @@ jobs:
           path: helm-repo
 
 
-      - name: Unpack Helm chart
-        run: |
-          cd helm-repo
-          tar -zxvf *.tgz
-
       - name: Update image tag in values.yaml
         run: |
           cd helm-repo/estudiantes
