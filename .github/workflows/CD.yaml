@@ -58,7 +58,7 @@ jobs:
       - name: Update Helm chart
         run: |
           cd helm-repo
-          helm package estudiantes --version $(date +%Y%m%d%H%M%S)
+          helm package estudiantes
           helm repo index .
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
