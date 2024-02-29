@@ -62,18 +62,8 @@ jobs:
           helm repo index .
 
       - name: Push changes
-        uses: actions/checkout@v3
+        uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          repository: Edj2003/helm-estudiantes
-          branch: gh-pages
-          persist-credentials: false
-          fetch-depth: 0
-
-      - name: Commit and push
-        run: |
-            git config --global user.name 'github-actions'
-            git config --global user.email 'github-actions@github.com'
-            git add .
-            git commit -m "Update image tag in values.yaml"
-            git push
+            github_token: ${{ secrets.HELM_TOKEN }}
+            repository: Edj2003/helm-estudiantes
+            branch: gh-pages
