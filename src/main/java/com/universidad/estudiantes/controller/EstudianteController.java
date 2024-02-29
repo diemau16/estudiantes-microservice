@@ -44,4 +44,8 @@ public class EstudianteController {
     public String test3() {
         return "El microservicio se ha actualizado una vez ,as";
     }
+    @GetMapping(path ="/test4")
+    public String test4() {
+        return "El microservicio ya sirve por fin bendito DIos";
+    }
 }
